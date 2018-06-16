@@ -3,8 +3,8 @@
     "settings": {
         "import/resolver": {
             "node": {
-                "paths": ["src"],
-                "moduleDirectory": ["node_modules", "src"]
+                "paths": ["."],
+                "moduleDirectory": ["node_modules", "."]
             }
         }
     },

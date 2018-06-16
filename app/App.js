@@ -4,7 +4,7 @@
  * @flow
  */
 import React, { Component } from 'react';
-import { Welcome } from './screens';
+import { Welcome } from 'app/screens';
 
 export class App extends Component {
     render() {

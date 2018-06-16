@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "react-native-scaffold",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "lint": "eslint src/",
     "precommit": "lint-staged",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "NODE_PATH=src jest"
+    "test": "jest"
   },
   "lint-staged": {
     "*.js": [
