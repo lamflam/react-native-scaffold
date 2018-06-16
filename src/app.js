@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import { Welcome } from './screens';
 
 export class App extends Component {
-  render() {
-    return <Welcome />;
-  }
+    render() {
+        return <Welcome />;
+    }
 }
