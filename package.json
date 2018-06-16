@@ -7,12 +7,13 @@
     "lint": "eslint src/",
     "precommit": "lint-staged",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "NODE_PATH=src jest"
   },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
-      "git add"
+      "git add",
+      "yarn test --bail --findRelatedTests"
     ]
   },
   "dependencies": {
