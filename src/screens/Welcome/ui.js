@@ -15,8 +15,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export class WelcomeUI extends PureComponent<Props> {
+export class WelcomeUI extends PureComponent {
   render() {
     return (
       <View style={styles.container}>
