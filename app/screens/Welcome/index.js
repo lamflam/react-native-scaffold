@@ -1,1 +1,1 @@
-export { WelcomeUI as Welcome } from './ui';
+export { WelcomeContainer as Welcome } from './container';
