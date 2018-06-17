@@ -1,9 +1,9 @@
 import React from 'react';
 import { testSnapshot } from 'app/utils/tests';
-import { Welcome2UI } from './ui';
+import { ToDoListUI } from './ui';
 
-describe('Welcome2 UI', () => {
+describe('ToDoListUI UI', () => {
     it('matches snapshot', () => {
-        testSnapshot(<Welcome2UI />);
+        testSnapshot(<ToDoListUI />);
     });
 });

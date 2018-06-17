@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { WelcomeUI } from './ui';
 
 export class Welcome extends PureComponent {
+    static displayName = 'WelcomeContainer';
+
     static propTypes = {
         navigation: PropTypes.shape({
             navigate: PropTypes.func.isRequired
@@ -16,7 +18,7 @@ export class Welcome extends PureComponent {
 
     toNextScreen() {
         const { navigation } = this.props;
-        navigation.navigate('welcome2');
+        navigation.navigate('todo');
     }
 
     render() {

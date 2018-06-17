@@ -23,7 +23,7 @@ exports[`Welcome UI matches snapshot 1`] = `
       }
     }
   >
-    Welcome to React Native!
+    Welcome to React Native Scaffolding!
   </Text>
   <Text
     accessible={true}
@@ -37,22 +37,7 @@ exports[`Welcome UI matches snapshot 1`] = `
       }
     }
   >
-    To get started, edit App.js
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "color": "#333333",
-        "marginBottom": 5,
-        "textAlign": "center",
-      }
-    }
-  >
-    Press Cmd+R to reload,
-Cmd+D or shake for dev menu
+    Go to my To Do List
   </Text>
 </View>
 `;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Welcome2 UI matches snapshot 1`] = `
+exports[`ToDoListUI UI matches snapshot 1`] = `
 <View
   style={
     Object {
@@ -23,7 +23,7 @@ exports[`Welcome2 UI matches snapshot 1`] = `
       }
     }
   >
-    Welcome to React Native!
+    ToDoList to React Native!
   </Text>
   <Text
     accessible={true}
@@ -37,7 +37,7 @@ exports[`Welcome2 UI matches snapshot 1`] = `
       }
     }
   >
-    To get started, edit App.js
+    Build React Native app
   </Text>
   <Text
     accessible={true}
@@ -51,8 +51,7 @@ exports[`Welcome2 UI matches snapshot 1`] = `
       }
     }
   >
-    Press Cmd+R to reload,
-Cmd+D or shake for dev menu
+    Profit!
   </Text>
 </View>
 `;
