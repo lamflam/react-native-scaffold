@@ -1,49 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Welcome UI matches snapshot 1`] = `
-<View
-  style={
+<Welcome
+  css={[Function]}
+  styles={
     Object {
-      "alignItems": "center",
-      "backgroundColor": "#F5FCFF",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
+      "container": Object {
+        "alignItems": "center",
+        "backgroundColor": "#F5FCFF",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      "instructions": Object {
+        "backgroundColor": "transparent",
+        "fontFamily": "Avenir Book",
+        "fontSize": 17.5,
+        "marginBottom": 5,
+        "textAlign": "center",
+      },
+      "welcome": Object {
         "backgroundColor": "transparent",
         "fontFamily": "Avenir Book",
         "fontSize": 20,
         "fontWeight": "900",
         "margin": 10,
         "textAlign": "center",
-      }
+      },
     }
-  >
-    Welcome to React Native Scaffolding!
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    onPress={[Function]}
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "fontFamily": "Avenir Book",
-        "fontSize": 17.5,
-        "marginBottom": 5,
-        "textAlign": "center",
-      }
+  }
+  theme={
+    Object {
+      "colors": Object {
+        "black": "#000",
+        "gray00": "#111",
+        "gray02": "#222",
+        "gray03": "#333",
+        "white": "#FFF",
+      },
+      "device": Object {
+        "height": 1334,
+        "width": 750,
+      },
+      "fonts": Object {
+        "bold": Object {
+          "backgroundColor": "transparent",
+          "fontFamily": "Avenir Book",
+          "fontSize": 17.5,
+          "fontWeight": "900",
+        },
+        "normal": Object {
+          "backgroundColor": "transparent",
+          "fontFamily": "Avenir Book",
+          "fontSize": 17.5,
+        },
+      },
+      "normalize": [Function],
     }
-  >
-    Go to my To Do List
-  </Text>
-</View>
+  }
+  toNextScreen={[Function]}
+/>
 `;
