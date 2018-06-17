@@ -1,21 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
-import { styles } from './styles';
+import { styled } from './styles';
 
-export class WelcomeUI extends PureComponent {
+export class Welcome extends PureComponent {
     static propTypes = {
+        styles: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])).isRequired,
         toNextScreen: PropTypes.func.isRequired
     };
 
     render() {
-        const { toNextScreen } = this.props;
+        const { styles, toNextScreen } = this.props;
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>Welcome to React Native Scaffolding!</Text>
@@ -26,3 +21,5 @@ export class WelcomeUI extends PureComponent {
         );
     }
 }
+
+export const WelcomeUI = styled(Welcome);

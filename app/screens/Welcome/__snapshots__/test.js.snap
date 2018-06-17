@@ -17,7 +17,10 @@ exports[`Welcome UI matches snapshot 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
+        "backgroundColor": "transparent",
+        "fontFamily": "Avenir Book",
         "fontSize": 20,
+        "fontWeight": "900",
         "margin": 10,
         "textAlign": "center",
       }
@@ -29,9 +32,12 @@ exports[`Welcome UI matches snapshot 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
-        "color": "#333333",
+        "backgroundColor": "transparent",
+        "fontFamily": "Avenir Book",
+        "fontSize": 17.5,
         "marginBottom": 5,
         "textAlign": "center",
       }

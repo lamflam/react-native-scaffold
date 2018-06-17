@@ -1,12 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 import React, { Component } from 'react';
 import { YellowBox } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { Welcome, ToDoList } from 'app/screens';
+import { registerTheme } from 'app/theme';
 
 // isMounted is being used by react-native internal navigation, but has
 // recently been deprecated by react. Safe to ignore for now, but hopefully
@@ -14,6 +10,8 @@ import { Welcome, ToDoList } from 'app/screens';
 //
 // https://github.com/react-navigation/react-navigation/issues/3956
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+registerTheme();
 
 const RootStack = createStackNavigator(
     {
