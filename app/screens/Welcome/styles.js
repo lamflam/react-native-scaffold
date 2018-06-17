@@ -1,6 +1,6 @@
 import { withStyles } from 'app/theme';
 
-export const styled = withStyles(({ fonts }) => ({
+export const styled = withStyles(theme => ({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -8,13 +8,13 @@ export const styled = withStyles(({ fonts }) => ({
         backgroundColor: '#F5FCFF'
     },
     welcome: {
-        ...fonts.bold,
+        ...theme.fonts.bold,
         fontSize: 20,
         textAlign: 'center',
         margin: 10
     },
     instructions: {
-        ...fonts.normal,
+        ...theme.fonts.normal,
         textAlign: 'center',
         marginBottom: 5
     }

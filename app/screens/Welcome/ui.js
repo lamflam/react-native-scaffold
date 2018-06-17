@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Text, View } from 'react-native';
+import { Text, View } from 'app/components';
 import { styled } from './styles';
 
 export class Welcome extends PureComponent {
@@ -13,7 +13,9 @@ export class Welcome extends PureComponent {
         const { styles, toNextScreen } = this.props;
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>Welcome to React Native Scaffolding!</Text>
+                <Text bold style={styles.welcome}>
+                    Welcome to React Native Scaffolding!
+                </Text>
                 <Text onPress={toNextScreen} style={styles.instructions}>
                     Go to my To Do List
                 </Text>

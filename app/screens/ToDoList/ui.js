@@ -1,15 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { PureComponent } from 'react';
-import { Text, View } from 'react-native';
-import { styles } from './styles';
+import PropTypes from 'prop-types';
+import { Text, View } from 'app/components';
+import { styled } from './styles';
 
-export class ToDoListUI extends PureComponent {
+export class ToDoList extends PureComponent {
+    static propTypes = {
+        styles: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])).isRequired
+    };
+
     render() {
+        const { styles } = this.props;
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>ToDoList to React Native!</Text>
@@ -19,3 +19,5 @@ export class ToDoListUI extends PureComponent {
         );
     }
 }
+
+export const ToDoListUI = styled(ToDoList);

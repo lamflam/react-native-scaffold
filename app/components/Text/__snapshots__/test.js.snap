@@ -1,30 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToDoListUI UI matches snapshot 1`] = `
-<ToDoList
+exports[`Text UI matches snapshot 1`] = `
+<Text
+  bold={false}
   css={[Function]}
+  style={null}
   styles={
     Object {
-      "container": Object {
-        "alignItems": "center",
-        "backgroundColor": "#F5FCFF",
-        "flex": 1,
-        "justifyContent": "center",
-      },
-      "instructions": Object {
+      "bold": Object {
         "backgroundColor": "transparent",
         "fontFamily": "Avenir Book",
         "fontSize": 17.5,
-        "marginBottom": 5,
-        "textAlign": "center",
+        "fontWeight": "900",
       },
-      "welcome": Object {
+      "text": Object {
         "backgroundColor": "transparent",
         "fontFamily": "Avenir Book",
-        "fontSize": 20,
-        "fontWeight": "900",
-        "margin": 10,
-        "textAlign": "center",
+        "fontSize": 17.5,
       },
     }
   }
