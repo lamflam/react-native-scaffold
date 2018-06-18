@@ -9,7 +9,8 @@
     "new-screen": "bin/generate -s",
     "postinstall": "(find node_modules -type f -name .babelrc | grep -v /react-native/ | xargs rm) || true",
     "precommit": "lint-staged",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "run-ios": "react-native run-ios",
+    "start-dev-server": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
   "lint-staged": {
