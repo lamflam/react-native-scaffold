@@ -6,25 +6,25 @@ import { styled } from './styles';
 class NewToDo extends PureComponent {
     static propTypes = {
         styles: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])).isRequired,
-        updateTodo: PropTypes.func,
+        updateToDo: PropTypes.func,
         todo: PropTypes.string,
-        addToDo: PropTypes.func
+        createToDo: PropTypes.func
     };
 
     static defaultProps = {
         todo: '',
-        updateTodo: () => {},
-        addToDo: () => {}
+        updateToDo: () => {},
+        createToDo: () => {}
     };
 
     render() {
-        const { addToDo, updateTodo, styles, todo } = this.props;
+        const { createToDo, updateToDo, styles, todo } = this.props;
         return (
             <View style={styles.container}>
                 <View style={styles.innerContainer}>
-                    <TextInput placeholder="Add todo" style={styles.todoInput} onChangeText={updateTodo} value={todo} />
+                    <TextInput placeholder="Add todo" style={styles.todoInput} onChangeText={updateToDo} value={todo} />
                 </View>
-                <Text style={styles.button} onPress={addToDo}>
+                <Text style={styles.button} onPress={createToDo}>
                     Save
                 </Text>
             </View>

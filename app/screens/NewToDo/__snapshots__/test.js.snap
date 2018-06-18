@@ -2,7 +2,7 @@
 
 exports[`NewToDo UI renders correctly 1`] = `
 <NewToDo
-  addToDo={[Function]}
+  createToDo={[Function]}
   css={[Function]}
   styles={
     Object {
@@ -56,6 +56,6 @@ exports[`NewToDo UI renders correctly 1`] = `
     }
   }
   todo=""
-  updateTodo={[Function]}
+  updateToDo={[Function]}
 />
 `;

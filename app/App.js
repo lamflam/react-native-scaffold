@@ -3,6 +3,7 @@ import { YellowBox } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { NewToDo, ToDoList } from 'app/screens';
 import { registerTheme } from 'app/theme';
+import { RealmProvider, configureRealmStore } from 'app/providers/realm';
 
 // isMounted is being used by react-native internal navigation, but has
 // recently been deprecated by react. Safe to ignore for now, but hopefully
@@ -12,6 +13,8 @@ import { registerTheme } from 'app/theme';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 registerTheme();
+
+const realmStore = configureRealmStore();
 
 const RootStack = createStackNavigator(
     {
@@ -31,6 +34,10 @@ const RootStack = createStackNavigator(
 
 export class App extends Component {
     render() {
-        return <RootStack />;
+        return (
+            <RealmProvider store={realmStore}>
+                <RootStack />
+            </RealmProvider>
+        );
     }
 }

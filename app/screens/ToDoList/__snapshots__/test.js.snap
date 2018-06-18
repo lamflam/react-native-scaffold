@@ -4,6 +4,7 @@ exports[`ToDoListUI UI matches snapshot 1`] = `
 <ToDoList
   css={[Function]}
   newToDo={[Function]}
+  showOptions={[Function]}
   styles={
     Object {
       "button": Object {
@@ -68,5 +69,6 @@ exports[`ToDoListUI UI matches snapshot 1`] = `
     }
   }
   todos={Array []}
+  toggleToDo={[Function]}
 />
 `;

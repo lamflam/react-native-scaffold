@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
+import { withCreateToDo } from 'app/hoc/todo';
 import { NewToDoUI } from './ui';
 
 export class NewToDo extends PureComponent {
@@ -13,34 +14,37 @@ export class NewToDo extends PureComponent {
     static propTypes = {
         navigation: PropTypes.shape({
             navigate: PropTypes.func.isRequired
-        }).isRequired
+        }).isRequired,
+        createTodo: PropTypes.func.isRequired
     };
 
     constructor(props) {
         super(props);
-        this.addToDo = this.addToDo.bind(this);
-        this.updateTodo = this.updateTodo.bind(this);
+        this.createToDo = this.createToDo.bind(this);
+        this.updateToDo = this.updateToDo.bind(this);
         this.state = {
             todo: ''
         };
     }
 
-    updateTodo(text) {
+    updateToDo(text) {
         this.setState({
             todo: text
         });
     }
 
-    addToDo() {
-        const { navigation } = this.props;
+    createToDo() {
+        const { createTodo, navigation } = this.props;
+        const { todo } = this.state;
+        createTodo(todo);
         navigation.goBack();
     }
 
     render() {
         const { ...rest } = this.props;
         const { todo } = this.state;
-        return <NewToDoUI {...rest} addToDo={this.addToDo} todo={todo} updateTodo={this.updatetodo} />;
+        return <NewToDoUI {...rest} createToDo={this.createToDo} todo={todo} updateToDo={this.updateToDo} />;
     }
 }
 
-export const NewToDoContainer = compose()(NewToDo);
+export const NewToDoContainer = compose(withCreateToDo())(NewToDo);

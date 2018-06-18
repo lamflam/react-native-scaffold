@@ -9,24 +9,34 @@ export class ToDoList extends PureComponent {
         styles: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])).isRequired,
         todos: PropTypes.arrayOf(
             PropTypes.shape({
+                id: PropTypes.string,
                 text: PropTypes.string,
                 done: PropTypes.bool
             })
-        )
+        ),
+        toggleToDo: PropTypes.func,
+        showOptions: PropTypes.func
     };
 
     static defaultProps = {
         newToDo: () => {},
+        toggleToDo: () => {},
+        showOptions: () => {},
         todos: []
     };
 
     render() {
-        const { newToDo, styles, todos } = this.props;
+        const { newToDo, showOptions, styles, todos, toggleToDo } = this.props;
         return (
             <View style={styles.container}>
                 <View style={styles.listContainer}>
                     {todos.map(todo => (
-                        <Text key={todo.text} style={[styles.todo, todo.done && styles.done]}>
+                        <Text
+                            key={todo.id}
+                            onPress={() => toggleToDo(todo.id)}
+                            onLongPress={() => showOptions(todo.id)}
+                            style={[styles.todo, todo.done && styles.done]}
+                        >
                             {todo.text}
                         </Text>
                     ))}
