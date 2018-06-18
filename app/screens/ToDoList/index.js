@@ -1,1 +1,1 @@
-export { ToDoListUI as ToDoList } from './ui';
+export { ToDoListContainer as ToDoList } from './container';

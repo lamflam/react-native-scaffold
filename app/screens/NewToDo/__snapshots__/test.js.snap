@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToDoListUI UI matches snapshot 1`] = `
-<ToDoList
+exports[`NewToDo UI renders correctly 1`] = `
+<NewToDo
+  addToDo={[Function]}
   css={[Function]}
-  newToDo={[Function]}
   styles={
     Object {
       "button": Object {
@@ -17,24 +17,12 @@ exports[`ToDoListUI UI matches snapshot 1`] = `
         "backgroundColor": "#FFF",
         "flex": 1,
       },
-      "done": Object {
-        "backgroundColor": "transparent",
-        "fontFamily": "Avenir Book",
-        "fontSize": 17.5,
-        "textDecorationLine": "line-through",
-        "textDecorationStyle": "solid",
-      },
-      "listContainer": Object {
-        "alignItems": "center",
+      "innerContainer": Object {
         "flex": 1,
         "justifyContent": "center",
       },
-      "todo": Object {
-        "backgroundColor": "transparent",
-        "fontFamily": "Avenir Book",
-        "fontSize": 17.5,
-        "marginBottom": 5,
-        "textAlign": "center",
+      "todoInput": Object {
+        "margin": 12.5,
       },
     }
   }
@@ -67,6 +55,7 @@ exports[`ToDoListUI UI matches snapshot 1`] = `
       "normalize": [Function],
     }
   }
-  todos={Array []}
+  todo=""
+  updateTodo={[Function]}
 />
 `;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { YellowBox } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { Welcome, ToDoList } from 'app/screens';
+import { NewToDo, ToDoList } from 'app/screens';
 import { registerTheme } from 'app/theme';
 
 // isMounted is being used by react-native internal navigation, but has
@@ -15,15 +15,17 @@ registerTheme();
 
 const RootStack = createStackNavigator(
     {
-        welcome: {
-            screen: Welcome
+        toDoList: {
+            screen: ToDoList,
+            title: 'To Do List'
         },
-        todo: {
-            screen: ToDoList
+        newToDo: {
+            screen: NewToDo,
+            title: 'New To Do'
         }
     },
     {
-        initialRouteName: 'welcome'
+        initialRouteName: 'toDoList'
     }
 );
 

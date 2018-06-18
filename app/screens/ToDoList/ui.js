@@ -5,16 +5,35 @@ import { styled } from './styles';
 
 export class ToDoList extends PureComponent {
     static propTypes = {
-        styles: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])).isRequired
+        newToDo: PropTypes.func,
+        styles: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])).isRequired,
+        todos: PropTypes.arrayOf(
+            PropTypes.shape({
+                text: PropTypes.string,
+                done: PropTypes.bool
+            })
+        )
+    };
+
+    static defaultProps = {
+        newToDo: () => {},
+        todos: []
     };
 
     render() {
-        const { styles } = this.props;
+        const { newToDo, styles, todos } = this.props;
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>ToDoList to React Native!</Text>
-                <Text style={styles.instructions}>Build React Native app</Text>
-                <Text style={styles.instructions}>Profit!</Text>
+                <View style={styles.listContainer}>
+                    {todos.map(todo => (
+                        <Text key={todo.text} style={[styles.todo, todo.done && styles.done]}>
+                            {todo.text}
+                        </Text>
+                    ))}
+                </View>
+                <Text style={styles.button} onPress={newToDo}>
+                    Add todo
+                </Text>
             </View>
         );
     }

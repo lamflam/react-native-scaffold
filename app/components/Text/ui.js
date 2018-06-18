@@ -6,7 +6,7 @@ import { styled } from './styles';
 export class Text extends PureComponent {
     static propTypes = {
         styles: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])).isRequired,
-        style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+        style: PropTypes.oneOfType([PropTypes.array, PropTypes.number, PropTypes.object]),
         bold: PropTypes.bool
     };
 

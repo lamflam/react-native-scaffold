@@ -1,30 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Welcome UI matches snapshot 1`] = `
-<Welcome
+exports[`TextInput UI renders correctly 1`] = `
+<TextInput
   css={[Function]}
+  style={null}
   styles={
     Object {
-      "container": Object {
-        "alignItems": "center",
-        "backgroundColor": "#F5FCFF",
-        "flex": 1,
-        "justifyContent": "center",
-      },
-      "instructions": Object {
+      "input": Object {
         "backgroundColor": "transparent",
         "fontFamily": "Avenir Book",
         "fontSize": 17.5,
-        "marginBottom": 5,
-        "textAlign": "center",
-      },
-      "welcome": Object {
-        "backgroundColor": "transparent",
-        "fontFamily": "Avenir Book",
-        "fontSize": 20,
-        "fontWeight": "900",
-        "margin": 10,
-        "textAlign": "center",
       },
     }
   }
@@ -57,6 +42,5 @@ exports[`Welcome UI matches snapshot 1`] = `
       "normalize": [Function],
     }
   }
-  toNextScreen={[Function]}
 />
 `;

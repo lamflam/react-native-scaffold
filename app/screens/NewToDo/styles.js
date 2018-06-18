@@ -5,20 +5,12 @@ export const styled = withStyles(theme => ({
         flex: 1,
         backgroundColor: theme.colors.white
     },
-    listContainer: {
+    innerContainer: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent: 'center'
     },
-    todo: {
-        ...theme.fonts.normal,
-        textAlign: 'center',
-        marginBottom: 5
-    },
-    done: {
-        ...theme.fonts.normal,
-        textDecorationLine: 'line-through',
-        textDecorationStyle: 'solid'
+    todoInput: {
+        margin: theme.normalize(10)
     },
     button: {
         textAlign: 'center',
